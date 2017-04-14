@@ -1,7 +1,7 @@
 # 关于html等等的value以及赋值文本的存储属性的说明
 
 ```js
-//测试用例参考
+        //测试用例参考
         var CreateForm = document.createElement("form");
         CreateForm.action = "WebForm2.aspx";
         CreateForm.enctype = "application/x-www-form-urlencoded";//"multipart/form-data";
@@ -22,16 +22,16 @@
 ## Demo01
 
 ```js
-    var demo = "ab\"d\"d23"; //数值直接就是：非纯文本，数据包含了双引号，这个
+   var demo = "ab\"d\"d23"; //数值直接就是：非纯文本，数据包含了双引号，这个
    var InnerHTML = "<input  name=\"mPackage\" value=\"" + demo+ "\"/>";
    获取InnerHTML的数据的话： 
-    所以不管m的值是什么最终获取的value数据就是正常的.
+   所以不管m的值是什么最终获取的value数据就是正常的.
 ```
 
 ## Demo02
 
 ```js
-    var demo = "ab$werwd23"; //数值直接就是：纯文本，数据不包含了双引号
+   var demo = "ab$werwd23"; //数值直接就是：纯文本，数据不包含了双引号
    var InnerHTML = "<input  name=\"mPackage\" value=\"" + demo+ "\"/>";
    获取InnerHTML的数据的话： 就是标准的数据：InnerHTML: ab$werwd23.
 ```
@@ -45,7 +45,7 @@
 ```
 
 `注意`：demo03这样的情况解决方案
-> 使用javascript的编码函数进行编码即可解决函数为：`encodeURIComponent`
+> 使用javascript的编码函数进行编码即可解决函数为：`encodeURIComponent`[encodeURIComponent](http://www.cnblogs.com/tylerdonet/p/3483836.html)
 ，但是encodeURIComponent编码的`原则为`：
 
     定义和用法
@@ -66,6 +66,7 @@
     其他字符（比如 ：;/?:@&=+$,# 这些用于分隔 URI 组件的标点符号），都是由一个或多个十六进制的转义序列替换的。
 
     提示和注释
-    提示：请注意 encodeURIComponent() 函数 与 encodeURI() 函数的区别之处，前者假定它的参数是 URI 的一部分（比如协议、主机名、路径或查询字符串）。因此 encodeURIComponent() 函数将转义用于分隔 URI 各个部分的标点符号。
-
-`也就是说`： 对于单引号的话是不会进行编码操作的所以，`必须使用，双引号进行文本的bracket的操作，包括起来就可以了`
+    提示：请注意 encodeURIComponent() 函数 与 encodeURI() 函数的区别之处，前者假定它的参数是 
+    URI 的一部分（比如协议、主机名、路径或查询字符串）。     
+    因此 encodeURIComponent() 函数将转义用于分隔 URI 各个部分的标点符号。
+    `也就是说`： 对于单引号的话是不会进行编码操作的所以，`必须使用，双引号进行文本的bracket的操作，包括起来就可以了`
