@@ -40,7 +40,8 @@
 
 ```html
     var demo = "ab\"d\"d23"; //包含了双引号
-    InnerHTML = "<input  name=\"mPackage\" value=\"" + demo+ "\"/>";
+    //但是下面的InnerHtml的外包括为单引号，内部数据为双引号--并且内部数据包含了单引号
+   InnerHTML = "<input type='hidden' name='mPackage' value='" + encodeURIComponent(JSON.stringify(mPackageList)) + "'/>";
     获取InnerHTML的数据的话：自动被截断返回数据为:ab,后面的数据都被自动截断了就是获取数据信息的时候出现了错误
 ```
 
