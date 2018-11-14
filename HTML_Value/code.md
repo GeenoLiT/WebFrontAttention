@@ -9,7 +9,7 @@ encodeURI不编码字符有82个：!，#，$，&，'，(，)，*，+，,，-，.
 encodeURIComponent不编码字符有71个：!， '，(，)，*，-，.，_，~，0-9，a-z，A-Z
 ```
 
-##encodeURI 和 encodeURIComponent
+## encodeURI 和 encodeURIComponent
 ```
 encodeURI 和 encodeURIComponent都是ECMA-262标准中定义的函数,所有兼容这个标准的语言（如JavaScript, ActionScript）都会实现这两个函数。它们都是用来对URI （RFC-2396）字符串进行编码的全局函数，但是它们的处理方式和使用场景有所不同。为了解释它们的不同，我们首先需要理解RFC-2396中对于 URI中的字符分类：
 
