@@ -7,6 +7,7 @@ Alternatively, use delegated event handlers to attach event handlers.
 >----适用于已经存在的元素绑定方式
 $("元素").on("事件",function(){});
 
+
 2.Delegated event handlers have the advantage that they can process events from descendant elements 
 that are added to the document at a later time.
 
