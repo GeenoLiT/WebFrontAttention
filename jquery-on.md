@@ -1,4 +1,4 @@
-## jquery -----on方法usage
+## jquery -----on方法usage-by GeenoLiT 
 1.Event handlers are bound only to the currently selected elements; they must exist at the time 
 your code makes the call to .on(). To ensure the elements are present and can be selected, 
 place scripts after the elements in the HTML markup or perform event binding inside a document ready handler.
